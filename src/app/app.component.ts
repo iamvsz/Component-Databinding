@@ -8,4 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'component-databinding';
   serverElements: any[] = [{ type: 'server', name: 'First Server', content: 'Vishal Zade' }];
+
+  onServerAdded(ServerData: { ServerName: string, ServerContent: string }) {
+    this.serverElements.push({
+      type: 'server',
+      name: ServerData.ServerName,
+      content: ServerData.ServerContent
+    })
+  }
+
+  onBlueprintAdded(ServerData: { ServerName: string, ServerContent: string }) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: ServerData.ServerName,
+      content: ServerData.ServerContent
+    })
+    console.log(this.serverElements)
+  }
 }
