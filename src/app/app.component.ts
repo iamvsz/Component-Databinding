@@ -23,6 +23,5 @@ export class AppComponent {
       name: ServerData.ServerName,
       content: ServerData.ServerContent
     })
-    console.log(this.serverElements)
   }
 }
