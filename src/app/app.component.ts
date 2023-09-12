@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'component-databinding';
-  serverElements: any[] = [{ type: 'server', name: 'First Server', content: 'Vishal Zade' }];
+  serverElements: any[] = [];
 
   onServerAdded(ServerData: { ServerName: string, ServerContent: string }) {
     this.serverElements.push({
